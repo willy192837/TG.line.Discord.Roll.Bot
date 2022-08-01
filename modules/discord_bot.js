@@ -421,7 +421,7 @@ async function count() {
 
 }
 async function count2() {
-	if (!client.cluster) return '🌼bothelp | hktrpg.com🍎';
+	if (!client.cluster) return '小饅頭的家';
 	const promises = [
 		client.cluster.fetchClientValues('guilds.cache.size'),
 		client.cluster
@@ -436,7 +436,7 @@ async function count2() {
 		})
 		.catch((err) => {
 			console.error(`disocrdbot #617 error ${err}`)
-			return '🌼bothelp | hktrpg.com🍎';
+			return '小饅頭的家';
 		});
 }
 
