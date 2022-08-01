@@ -177,7 +177,7 @@ client.once('ready', async () => {
 });
 
 client.on('ready', async () => {
-	client.user.setActivity('🌼bothelp | hktrpg.com🍎');
+	client.user.setActivity('小饅頭的家');
 	console.log(`Discord: Logged in as ${client.user.tag}!`);
 	var switchSetActivity = 0;
 	// eslint-disable-next-line no-unused-vars
@@ -194,7 +194,7 @@ client.on('ready', async () => {
 	const refreshId2 = setInterval(async () => {
 		switch (switchSetActivity % 2) {
 			case 1:
-				client.user.setActivity('🌼bothelp | hktrpg.com🍎');
+				client.user.setActivity('小饅頭的家');
 				break;
 			default:
 				client.user.setActivity(await count2());
