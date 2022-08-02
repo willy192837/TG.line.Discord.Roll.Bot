@@ -77,3 +77,6 @@
     "jest": "^28.1.2"
   }
 }
+"scripts": {
+   "start": "node index.js"
+}
