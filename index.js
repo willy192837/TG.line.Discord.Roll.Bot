@@ -20,7 +20,7 @@ process.on('warning', (warning) => {
   console.warn('warning', warning.message); // Print the warning message
   console.warn('warning', warning.stack); // Print the stack trace
 });
-client.login(config.token)
+
 /*
 /*
 流程解釋
