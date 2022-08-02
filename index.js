@@ -1,12 +1,27 @@
-const Discord = require('discord.js')
-const client = new Discord.Client()
-const config = require('./config.json')
+"use strict";
 
-client.on('ready',() => {
-  console.log('the client is ready!')
-})
+require('dotenv').config();
+if (process.env.mongoURL) {
+  require('./modules/db-connector');
+  return;
+}
 
+
+
+require('fs').readdirSync(__dirname + '/modules/').forEach(function (file) {
+  if (file.match(/\.js$/) && file.match(/^core-/)) {
+    var name = file.replace('.js', '');
+    exports[name] = require('./modules/' + file);
+  }
+});
+
+process.on('warning', (warning) => {
+  console.warn('warning', warning.name); // Print the warning name
+  console.warn('warning', warning.message); // Print the warning message
+  console.warn('warning', warning.stack); // Print the stack trace
+});
 client.login(config.token)
+/*
 /*
 流程解釋
 
